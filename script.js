@@ -3,6 +3,43 @@ const textElement = document.getElementById('text')
 // Selects the optionButtons in the window, and sets it to the id='option-buttons' in index.html
 const optionButtonsElement = document.getElementById('option-buttons')
 
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+    })
+})
+
+function openModal(modal) {
+    if (modal == null) return 
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+    if (modal == null) return 
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
 // This starts as an empty state, and will keep track of items the player has on them
 // throughout the game, unlocking optional choices and dialogs the play wouldn't have
 // otherwise
@@ -117,7 +154,7 @@ const textNodes = [
                 // requiredState takes in the players currentState and check if they have what they need
                 // to display this option, if they do not this option will not be shown.
                 requiredState: (currentState) => currentState.Item1,
-                // Sets the new state, here they player traded an item, and gained a new item. the traded
+                // Sets the new state, here the player traded an item, and gained a new item. the traded
                 // item becomes false, while the newly aquired item becomes true. 
                 setState: { Item1: false, NewItem: true },
                 nextText: 3
@@ -167,3 +204,29 @@ const textNodes = [
 
 // This calls the startGame function above as soon as the page loads to start the game.
 startGame()
+
+
+// $(document).ready(function () {
+//     $('#modalName').modal({
+//         backdrop: 'static',
+//         keyboard: false
+//     })
+
+//     $("#submit").click(function() {
+//         var form = $("#inputs")
+
+//         if (form[0].checkValidity() === false) {
+//             event.preventDefault()
+//             event.StopPropagation()
+//         }
+//         form.addClass('was-validated')
+
+//         var code = "";
+//         $("#inputs").each(function() {
+//             var text1 = $(this).find("#skaven-name").val();
+//             code += text1;
+//         });
+
+//         $("#results").html(code);
+//     });
+// });

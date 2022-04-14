@@ -10,8 +10,29 @@
         <title>Text Adventure</title>
     </head>
     <body>
+        <div class="modal-button">     
+            <button data-modal-target="#modal"> Open Modal </button>
+            <div class="modal" id="modal">
+                <div class="modal-header modal-content">
+                    <div class="title">Example Modal</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>    
+                <div class="modal-body">
+                    <form id="inputs" class="needs-validation" novalidate="">
+                        <label for="skaven-name">Skaven Name</label>
+                        <input id="skaven-name" placeholder="Name" type="text" name="name" required="">
+                        <button 
+                            id="submit" type="submit" data-name-button class="accept-button"
+                        >
+                            Accept
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>    
+        <div id="overlay"></div>
         <div class=container>
-            <div id="text">Text</div>
+            <div id="text"><h1 id="results"></div>
             <div id="option-buttons" class="btn-grid">
                 <button class="btn">Option 1</button> 
                 <button class="btn">Option 2</button> 
