@@ -1,44 +1,99 @@
 <!DOCTYPE html>
-    
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css" rel="stylesheet">
-        <script defer src="script.js"></script>
-        <title>Text Adventure</title>
+        <link href="./css/styles1.css" rel="stylesheet">
+        <script defer src="scriptIndex.js"></script>
+        <title>SkavenSim</title>
     </head>
-    <body>
-        <div class="modal-button">     
-            <button data-modal-target="#modal"> Open Modal </button>
-            <div class="modal" id="modal">
-                <div class="modal-header modal-content">
-                    <div class="title">Example Modal</div>
-                    <button data-close-button class="close-button">&times;</button>
-                </div>    
-                <div class="modal-body">
-                    <form id="inputs" class="needs-validation" novalidate="">
-                        <label for="skaven-name">Skaven Name</label>
-                        <input id="skaven-name" placeholder="Name" type="text" name="name" required="">
-                        <button 
-                            id="submit" type="submit" data-name-button class="accept-button"
-                        >
-                            Accept
-                        </button>
-                    </form>
+        <body>
+            <div class="title">
+                <h1>Skaven Sim</h1>
+                <h4>A skaven text adventure</h4>
+            </div>
+            <div class="textContainer">
+            <p class="textArea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, aut soluta. Est consectetur voluptate hic fugit quo aspernatur repudiandae possimus eligendi sed magnam dolorem esse sint minus, exercitationem dolores. Iste nulla omnis ullam? Odio deserunt libero ab ad rem saepe numquam eos porro sapiente culpa, voluptates inventore illum voluptatum temporibus dolores, deleniti aperiam. Sunt fugiat at aspernatur hic? Tempore maxime iste nesciunt perferendis non quod nam! Accusamus, sequi dolorem similique doloribus, quis quaerat, nisi asperiores et cum explicabo voluptates. Voluptatibus?</p>
+            </div>
+            <div class="clanFlags">
+                <div id="flagWrapper" class="flagContainer"> 
+                    <button class="flagBtn">
+                        <p class="clanName">Clan Mors</p>
+                        <img class="flag" id="mors" src="./pics/clan_mors_crest.webp" width="256" height="256"/>
+ 
+                    </button>   
+                </div>
+                <div id="flagWrapper">
+                    <button class="flagBtn">
+                        <p class="clanName">Clan Moulder</p>
+                        <img class="flag" id="moulder" src="./pics/clan_moulder_crest.webp" width="256" height="256"/>
+                    
+                    </button>    
+                </div>
+                <div id="flagWrapper">
+                    <button class="flagBtn">
+                        <p class="clanName">Clan Skryre</p>
+                        <img class="flag" id="skryre" src="./pics/Clan_Skryre.webp" width="256" height="256"/>
+                    
+                    </button>
+                </div>
+                <div id="flagWrapper">
+                    <button class="flagBtn">
+                        <p class="clanName">Clan Pestilens</p>
+                        <img class="flag" id="pestilens" src="./pics/clan_pestilens_crest.webp" width="256" height="256"/>
+                    
+                    </button>
                 </div>
             </div>
-        </div>    
-        <div id="overlay"></div>
-        <div class=container>
-            <div id="text"><h1 id="results"></div>
-            <div id="option-buttons" class="btn-grid">
-                <button class="btn">Option 1</button> 
-                <button class="btn">Option 2</button> 
-                <button class="btn">Option 3</button> 
-                <button class="btn">Option 4</button>    
+            <div>
+                <button 
+                    onclick="location.href='./game.html'" 
+                    type="button"
+                    class="startButton"
+                >
+                    Start Your Ascension!
+                </button>
             </div>
-        </div>        
-    </body>
+            <div class="footer">
+                <div class="social-title">
+                    <h3>My Social Networks:</h3>
+                </div>
+                <div class="social-media">
+                    <button 
+                        onclick="location.href='./game.html'" 
+                        type="button"
+                        class="socialBtn"
+                    >
+                        <a href="https://www.facebook.com/justin.easton.3158/" target="_blank">
+                        <img  src="./pics/facebook.svg" width="32" height="32" alt="facebook">
+                    </button>
+                    <button 
+                        onclick="location.href='./game.html'" 
+                        type="button"
+                        class="socialBtn"
+                    >
+                        <a href="https://www.instagram.com/redm0n/" target="_blank">
+                        <img  src="./pics/instagram.svg" width="32" height="32" alt="instagram">    
+                    </button>
+                    <button 
+                        onclick="location.href='./game.html'" 
+                        type="button"
+                        class="socialBtn"
+                    >
+                        <a href="https://github.com/DrixaBoi" target="_blank">
+                        <img  src="./pics/github.svg" width="32" height="32" alt="Github">    
+                    </button>
+                    <button 
+                        onclick="location.href='./game.html'" 
+                        type="button"
+                        class="socialBtn"
+                    >
+                        <a href="https://www.linkedin.com/in/justin-eastin-514a59223/" target="_blank">
+                        <img  src="./pics/linkedin.svg" width="32" height="34" alt="Linkedin">        
+                    </button>
+                </div>
+            </div>    
+        </body>
 </html>

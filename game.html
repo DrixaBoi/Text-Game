@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/styles.css" rel="stylesheet">
+        <script defer src="script.js"></script>
+        <title>SkavenSim</title>
+    </head>
+    <body>
+        <div>
+            <button
+                onclick="location.href='./index.html'" 
+                type="button"
+                class="homeBtn"
+            >
+                Home Page
+            </button>
+        </div> 
+        <div class="modal-button">    
+            <button class="modal-btn" data-modal-target="#modal"> Edit Your Skaven Name </button>
+            <div class="modal" id="modal">
+                <div class="modal-header modal-content">
+                    <div class="title">WHAT IS-IS YOUR NAME SKAVEN?</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>    
+                <div class="modal-body">
+                    <form id="input" class="nameForm">
+                        <div class="name-input">
+                            <label id="nameLabel" for="nameField">Skaven Name</label>
+                            <input class="nameInput" id="nameField" placeholder="Name" type="text" maxlength="15">
+                        </div>
+                        <div>
+                            <button id="subButton" type="button" class="subButton">
+                                THIS NAME YES-YES!
+                            </button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>    
+        <div id="overlay"></div>
+        <div class=container>
+            <div id="text"><h1 id="results"></div>
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button> 
+                <button class="btn">Option 2</button> 
+                <button class="btn">Option 3</button> 
+                <button class="btn">Option 4</button>    
+            </div>
+        </div>
+        <div>
+            <p class="nameResult" id="result"></p>
+        </div>        
+    </body>
+</html>

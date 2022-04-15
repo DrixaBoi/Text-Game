@@ -1,0 +1,180 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+background-image: url("../pics/Skaven.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 10%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:
+    0 2px 20px rgb(201, 240, 28),
+    0 4px 20px rgb(2, 19, 2), 
+    0 8px 25px rgb(32, 141, 28),
+    0 12px 30px rgb(40, 230, 33),
+    0 16px 35px rgb(131, 219, 60);
+}
+
+.title h1 {
+    font-size: 3.25rem;
+}
+
+.title h4 {
+    font-size: 1.25rem;
+    margin-top: -35px;
+}
+
+.textContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 68%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.textArea {
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.10rem;
+    color: white;
+}
+
+.clanFlags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flagBtn {
+    margin:30px 40px 30px 40px;
+    width: 145px;
+    height: 175px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.flagBtn:hover {
+    cursor: pointer;
+    background: rgb(32, 185, 27);
+    box-shadow:
+    0 2px 20px rgb(201, 240, 28),
+    0 4px 20px rgb(2, 19, 2), 
+    0 8px 25px rgb(32, 141, 28),
+    0 12px 30px rgb(40, 230, 33),
+    0 16px 35px rgb(131, 219, 60);
+}
+
+#flagWrapper .clanName {
+    position: fixed;
+    visibility: hidden;
+    color: white;
+    font-size: 2.25rem;
+}
+
+#flagWrapper:hover .clanName {
+    visibility: visible;
+}
+
+.flag:hover {
+    display: flex;
+}
+
+.startButton {
+    margin-top: 50px; 
+    font-size: 2.00rem;
+    background-color: rgb(104, 231, 73);
+    border: 1px solid rgb(20, 117, 20);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(6, 63, 4);
+    outline: none;
+    box-shadow:
+    0 1px 5px rgb(201, 240, 28),
+    0 2px 5px rgb(2, 19, 2), 
+    0 2px 5px rgb(32, 141, 28),
+    0 2px 5px rgb(40, 230, 33),
+    0 2px 5px rgb(131, 219, 60);
+}
+
+.startButton:hover {
+    cursor: pointer;
+    box-shadow:
+    0 1px 10px rgb(201, 240, 28),
+    0 2px 10px rgb(2, 19, 2), 
+    0 4px 15px rgb(32, 141, 28),
+    0 6px 20px rgb(40, 230, 33),
+    0 8px 25px rgb(131, 219, 60);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.social-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 
+    0 1px 1px rgb(205, 238, 59),
+    1px 4px 6px rgb(46, 223, 46);
+    color: black;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+}
+
+.socialBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    background-color: white;
+    box-shadow:
+    0 1px 5px rgb(201, 240, 28),
+    0 2px 5px rgb(2, 19, 2), 
+    0 2px 5px rgb(32, 141, 28),
+    0 2px 5px rgb(40, 230, 33),
+    0 2px 5px rgb(131, 219, 60);
+}
+
+.socialBtn:hover {
+    box-shadow:
+    0 1px 10px rgb(201, 240, 28),
+    0 2px 10px rgb(2, 19, 2), 
+    0 4px 15px rgb(32, 141, 28),
+    0 6px 20px rgb(40, 230, 33),
+    0 8px 20px rgb(131, 219, 60);
+}

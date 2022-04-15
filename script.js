@@ -1,12 +1,15 @@
-// Selects the textElement in the window, and sets it to the id='text' in index.html
+// Calls the element with the ID of text from the HTML, and sets it to textElement
+// for use in the .js script
 const textElement = document.getElementById('text')
-// Selects the optionButtons in the window, and sets it to the id='option-buttons' in index.html
+// Calls the element with the ID of option-buttons from the HTML, and sets it to optionButtonsElement
+// for use in the .js script
 const optionButtonsElement = document.getElementById('option-buttons')
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
+// Calls the new openModalButtons above to set click listener to open the nameField modal
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modal = document.querySelector(button.dataset.modalTarget)
@@ -14,6 +17,8 @@ openModalButtons.forEach(button => {
     })
 })
 
+// Calls the new overlay above to set a click listener to close the nameField modal if the user 
+// clicks outside of the modal
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
@@ -21,6 +26,7 @@ overlay.addEventListener('click', () => {
     })
 })
 
+// Calls the new closeModalButtons above to set a click listener to close the nameField modal
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modal = button.closest('.modal')
@@ -28,17 +34,39 @@ closeModalButtons.forEach(button => {
     })
 })
 
+// Function that adds the .active class to the modal element in the HTML
 function openModal(modal) {
     if (modal == null) return 
     modal.classList.add('active')
     overlay.classList.add('active')
 }
 
+// Function that removes the .active class from the modal element in the HTML
 function closeModal(modal) {
     if (modal == null) return 
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+
+// Function that calls the nameField ID from HTML to store it as a result, recalling the
+// result to check if it passes params set (minimum 3 chars). If it passes it will be avaiable
+// to be used on the HTML with a id="result" in an element.
+function getUserName() {
+    var nameField = document.getElementById('nameField').value;
+    var result = document.getElementById('result');
+
+    if (nameField.length < 3) {
+        result.textContent = 'Skaven names must be at least 3 characters';
+    } else {
+        result.textContent = 'Welcome to the clan ' + nameField;
+        closeModal(modal)
+    }
+}
+
+// This calls the subButton to add a click listener, then checking through the getUserName params
+// before taking the text input and posting it to the id="result" in the HTML
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click', getUserName, false);
 
 // This starts as an empty state, and will keep track of items the player has on them
 // throughout the game, unlocking optional choices and dialogs the play wouldn't have
@@ -117,7 +145,7 @@ function selectOption(option) {
 }
 
 // This holds the defined textNodes (objects) inside of a string.
-const textNodes = [
+const textNodes= [
     {
         // This sets the textNodes id so they can be linked accordingly to progress through the adventure.
         id: 1,
@@ -206,27 +234,10 @@ const textNodes = [
 startGame()
 
 
-// $(document).ready(function () {
-//     $('#modalName').modal({
-//         backdrop: 'static',
-//         keyboard: false
-//     })
-
-//     $("#submit").click(function() {
-//         var form = $("#inputs")
-
-//         if (form[0].checkValidity() === false) {
-//             event.preventDefault()
-//             event.StopPropagation()
-//         }
-//         form.addClass('was-validated')
-
-//         var code = "";
-//         $("#inputs").each(function() {
-//             var text1 = $(this).find("#skaven-name").val();
-//             code += text1;
-//         });
-
-//         $("#results").html(code);
-//     });
+// var input = document.getElementById("nameField");
+// input.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) {
+//    event.preventDefault();
+//    document.getElementById("subButton").click();
+//   }
 // });
