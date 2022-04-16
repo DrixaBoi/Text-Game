@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -21,9 +21,42 @@ align-items: center;
     margin: 20px;
     margin-bottom: 40px;
     width: 80%;
-    height: 10%;
-    background-color: white;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
+    font-stretch: expanded;
+    box-shadow:
+        0 2px 20px rgb(201, 240, 28),
+        0 4px 20px rgb(2, 19, 2), 
+        0 8px 25px rgb(32, 141, 28),
+        0 12px 30px rgb(40, 230, 33),
+        0 16px 35px rgb(131, 219, 60);
+    color: rgb(92, 226, 87);
+}
+
+.title h1 {
+    font-size: 4.25rem;
+    margin-top: 5px;
+    text-shadow: 
+        0 2px 5px rgb(201, 240, 28),
+        0 3px 5px rgb(2, 19, 2), 
+        0 4px 5px rgb(32, 141, 28),
+        0 5px 5px rgb(40, 230, 33),
+        0 6px 5px rgb(131, 219, 60);
+}
+
+.title h4 {
+    font-size: 1.15rem;
+    margin-top: -35px;
+}
+
+.textContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 68%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 5%;;
     box-shadow:
         0 2px 20px rgb(201, 240, 28),
         0 4px 20px rgb(2, 19, 2), 
@@ -32,29 +65,51 @@ align-items: center;
         0 16px 35px rgb(131, 219, 60);
 }
 
-.title h1 {
-    font-size: 3.25rem;
-}
-
-.title h4 {
-    font-size: 1.25rem;
-    margin-top: -35px;
-}
-
-.textContainer {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 68%;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-
 .textArea {
     margin: auto;
     border: none;
     border-radius: 10px;
     font-size: 1.10rem;
-    color: white;
+    color: rgb(62, 173, 40);
+    padding: 5px 10px;
+}
+
+.skavenText {
+    font-size: 1.60rem;
+    color: rgb(146, 233, 143);
+    text-shadow: 
+        0 1px 5px rgb(201, 240, 28),
+        0 2px 5px rgb(2, 19, 2), 
+        0 2px 5px rgb(32, 141, 28),
+        0 2px 5px rgb(40, 230, 33),
+        0 2px 5px rgb(131, 219, 60);
+}
+
+.textSpan {
+    font-size: 1.30rem;
+    color: rgb(146, 233, 143);
+    text-shadow: 
+        0 1px 5px rgb(201, 240, 28),
+        0 2px 5px rgb(2, 19, 2), 
+        0 2px 5px rgb(32, 141, 28),
+        0 2px 5px rgb(40, 230, 33),
+        0 2px 5px rgb(131, 219, 60);
+}
+
+.tab {
+    text-indent: 30px;
+}
+
+.flagTitle {
+    margin-top: 10%;
+    font-size: 2.25rem;
+    margin-top: 5px;
+    text-shadow: 
+        0 2px 5px rgb(201, 240, 28),
+        0 3px 5px rgb(2, 19, 2), 
+        0 4px 5px rgb(32, 141, 28),
+        0 5px 5px rgb(40, 230, 33),
+        0 6px 5px rgb(131, 219, 60);
 }
 
 .clanFlags {
@@ -88,6 +143,7 @@ align-items: center;
     transition: 300ms ease-in-out;
 }
 
+
 #flagWrapper .clanName {
     position: fixed;
     visibility: hidden;
@@ -106,12 +162,13 @@ align-items: center;
 }
 
 .startButton {
-    margin-top: 50px; 
-    font-size: 2.00rem;
+    margin-top: 30%; 
+    font-size: 2.25rem;
+    font-weight: bold;
     background-color: rgb(104, 231, 73);
     border: 1px solid rgb(20, 117, 20);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: rgb(6, 63, 4);
     outline: none;
     box-shadow:
@@ -139,7 +196,7 @@ align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10%;
 }
 
 .social-title {
@@ -186,6 +243,29 @@ align-items: center;
     transition: 200ms ease-in-out;
 }
 
+.source {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(160, 163, 158);
+    font-size: .80rem;
+    margin: 20px;
+}
+
+.WHlink {
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(104, 231, 73);
+
+    box-shadow:
+        0 1px 5px rgb(201, 240, 28),
+        0 2px 5px rgb(2, 19, 2), 
+        0 2px 5px rgb(32, 141, 28),
+        0 2px 5px rgb(40, 230, 33),
+        0 2px 5px rgb(131, 219, 60);
+}
+
 /* Modal styling */
 
 .modal {
@@ -199,7 +279,7 @@ align-items: center;
     border-radius: 10px;
     z-index: 10;
     background-color: rgba(0, 0, 0, .8);
-    width: 400px;
+    width: 600px;
     max-width: 80%;
     box-shadow:
     0 1px 2px rgb(201, 240, 28), 
@@ -229,7 +309,7 @@ align-items: center;
 }
 
 .modal-header .modalTitle {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-weight: bold;
 }
 

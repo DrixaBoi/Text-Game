@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -15,6 +15,44 @@ body {
     background-image: url("../pics/Skaven.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.titleHeader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: -35%;
+    width: 80%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    font-stretch: expanded;
+    box-shadow:
+        0 2px 20px rgb(201, 240, 28),
+        0 4px 20px rgb(2, 19, 2), 
+        0 8px 25px rgb(32, 141, 28),
+        0 12px 30px rgb(40, 230, 33),
+        0 16px 35px rgb(131, 219, 60);
+    color: rgb(92, 226, 87);
+}
+
+.titleHeader h1 {
+    font-size: 4.25rem;
+    margin-top: 5px;
+    text-shadow: 
+        0 2px 5px rgb(201, 240, 28),
+        0 3px 5px rgb(2, 19, 2), 
+        0 4px 5px rgb(32, 141, 28),
+        0 5px 5px rgb(40, 230, 33),
+        0 6px 5px rgb(131, 219, 60);
+}
+
+.titleHeader h4 {
+    font-size: 1.15rem;
+    margin-top: -35px;
 }
 
 .container {
@@ -72,7 +110,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 1200%);
+    transform: translate(-50%, 1100%);
     box-shadow:
     0 1px 5px rgb(201, 240, 28),
     0 2px 5px rgb(2, 19, 2), 
